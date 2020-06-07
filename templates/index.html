@@ -1,6 +1,9 @@
 <html>
     <body>
-        <h1>This is some json</h1>
+        <form action="/update-filter" method="post">
+            <label for="filter">Filter:</label>
+            <input type="text" id="filter" name="jq_filter" value="{{ filter_value }}">
+        </form>
         <pre><code>{{ json }}</code></pre>
     </body>
 </html>

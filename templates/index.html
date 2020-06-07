@@ -1,8 +1,8 @@
 <html>
     <body>
         <form action="/update-filter" method="post">
-            <label for="filter">Filter:</label>
-            <input type="text" id="filter" name="jq_filter" value="{{ filter_value }}">
+            <label for="filter">Filter <code>{{ filename }}</code>:</label>
+            <input type="text" id="filter" name="jq_filter" value="{{ filter }}">
         </form>
         <pre><code>{{ json }}</code></pre>
     </body>

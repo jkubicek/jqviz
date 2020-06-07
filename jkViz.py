@@ -1,6 +1,7 @@
 import click
 import subprocess
 import os
+import webbrowser
 
 from flask import Flask, render_template, redirect, url_for, request, session
 app = Flask(__name__)
@@ -22,12 +23,26 @@ def update_filter():
     session["filter"] = request.form["jq_filter"]
     return redirect(url_for("index"))
 
+@app.route('/shutdown', methods=['POST'])
+def shutdown():
+    shutdown_server()
+    return "Server shutting down..."
+
+def shutdown_server():
+    func = request.environ.get('werkzeug.server.shutdown')
+    if func is None:
+        raise RuntimeError('Not running with the Werkzeug Server')
+    func()
+
 @click.command()
 @click.argument('filename', type=click.Path(exists=True))
-def main(filename):
+@click.option('--port', default=5000, help="Port on which to run the Flask server")
+def main(filename, port):
     os.environ["FLASK_APP"] = __file__
     os.environ["JQ_FILENAME"] = filename
-    subprocess.check_call(["flask", "run"])
+    subprocess.check_call(["flask", "run"], stdout=subprocess.DEVNULL)
+    # webbrowser.open(f"http://127.0.0.1:{ port }/")
+
 
 if __name__ == "__main__":
     main()

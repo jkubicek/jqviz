@@ -26,7 +26,7 @@ def update_filter():
 @app.route('/shutdown', methods=['POST'])
 def shutdown():
     shutdown_server()
-    return "Server shutting down..."
+    return "<p>Server shutting down...</p><p>Feel free to close this window</p>"
 
 def shutdown_server():
     func = request.environ.get('werkzeug.server.shutdown')

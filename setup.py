@@ -21,6 +21,9 @@ INSTALL_REQUIRES = [
     "click",
     "Flask"
 ]
+CONSOLE_SCRIPTS = [
+    "jqviz=jqviz.jqviz:main",
+]
 
 ###################################################################
 
@@ -71,4 +74,7 @@ if __name__ == "__main__":
         classifiers=CLASSIFIERS,
         install_requires=INSTALL_REQUIRES,
         options={"bdist_wheel": {"universal": "1"}},
+        entry_points={
+            "console_scripts": CONSOLE_SCRIPTS
+        }
     )

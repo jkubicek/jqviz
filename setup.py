@@ -24,6 +24,9 @@ INSTALL_REQUIRES = [
 CONSOLE_SCRIPTS = [
     "jqviz=jqviz.jqviz:main",
 ]
+PACKAGE_DATA = {
+    'jqviz': ['templates': '*.html']
+}
 
 ###################################################################
 
@@ -76,5 +79,6 @@ if __name__ == "__main__":
         options={"bdist_wheel": {"universal": "1"}},
         entry_points={
             "console_scripts": CONSOLE_SCRIPTS
-        }
+        },
+        package_data=PACKAGE_DATA,
     )

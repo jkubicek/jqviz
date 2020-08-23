@@ -25,7 +25,7 @@ CONSOLE_SCRIPTS = [
     "jqviz=jqviz.jqviz:main",
 ]
 PACKAGE_DATA = {
-    'jqviz': ['templates': '*.html']
+    'jqviz': ['templates/*.html']
 }
 
 ###################################################################

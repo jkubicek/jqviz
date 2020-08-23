@@ -9,7 +9,7 @@ from setuptools import setup, find_packages
 
 NAME = "jqviz"
 PACKAGES = find_packages(where="src")
-META_PATH = os.path.join("src", "jkviz", "__init__.py")
+META_PATH = os.path.join("src", "jqviz", "__init__.py")
 CLASSIFIERS = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",

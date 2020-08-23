@@ -1,6 +1,6 @@
 __version__ = "0.0.1"
 
-__title__ = "jkviz"
+__title__ = "jqviz"
 __description__ = "Visualize your jq commands"
 __url__ = "https://github.com/jkubicek/jkviz"
 __uri__ = __url__

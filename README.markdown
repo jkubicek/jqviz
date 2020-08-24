@@ -1,8 +1,9 @@
-# Deploying
+`jqviz` will let you iterate over a `jq` string in your browser.
 
-I stole these deployment instructions from [hynek.me](https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/)
+To use, you must already have [jq] installed.
 
 ```bash
-python -m pep517.build .
-twine upload -r test --sign dist/jqviz-0.0.1*
+jqviz my_test_file.json
 ```
+
+To quit, hit the "quit" button in the browser window that opens, or `cmd-C` in the terminal window.

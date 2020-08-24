@@ -70,7 +70,7 @@ if __name__ == "__main__":
         maintainer=find_meta("author"),
         maintainer_email=find_meta("email"),
         long_description=read("README.markdown"),
-        long_description_content_type="text/x-markdown",
+        long_description_content_type="text/markdown",
         packages=PACKAGES,
         package_dir={"": "src"},
         zip_safe=False,

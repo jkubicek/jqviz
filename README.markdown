@@ -7,3 +7,6 @@ jqviz my_test_file.json
 ```
 
 To quit, hit the "quit" button in the browser window that opens, or `cmd-C` in the terminal window.
+
+
+[jq]: https://stedolan.github.io/jq/

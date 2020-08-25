@@ -1,4 +1,4 @@
-__version__ = "0.0.1"
+__version__ = "0.0.1a2"
 
 __title__ = "jqviz"
 __description__ = "Visualize your jq commands"
